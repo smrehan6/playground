@@ -1,9 +1,10 @@
 package smr.playground.base
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import smr.playground.R
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -52,5 +53,16 @@ open class BaseActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         Log.v(TAG, "onRestoreInstanceState")
         super.onRestoreInstanceState(savedInstanceState)
+    }
+
+    fun showDialog(
+        msg: String,
+        title: String = "Alert",
+        txtPositiveBtn: String = "OK",
+        positiveListener: DialogInterface.OnClickListener? = null
+    ) {
+        AlertDialog.Builder(this).setTitle(title).setMessage(msg)
+            .setPositiveButton(txtPositiveBtn, positiveListener)
+            .create().show()
     }
 }

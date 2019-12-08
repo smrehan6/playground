@@ -12,14 +12,9 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnWelcome.setOnClickListener {
-            startActivity(
-                Intent(
-                    this@MainActivity,
-                    WelcomeActivity::class.java
-                )
-            )
-        }
+        btnWelcome.setOnClickListener { startActivity(Intent(this, WelcomeActivity::class.java)) }
+        btnDialog.setOnClickListener { showDialog("Hello Dialog!") }
+        btnLaunchMode.setOnClickListener { TODO() }
     }
 
 }

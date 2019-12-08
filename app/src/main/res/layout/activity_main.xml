@@ -14,10 +14,10 @@
         android:text="Welcome Demo" />
 
     <Button
-        android:id="@+id/btnALC"
+        android:id="@+id/btnDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Life Cycle Demo" />
+        android:text="Show Dialog" />
 
     <Button
         android:id="@+id/btnLaunchMode"
