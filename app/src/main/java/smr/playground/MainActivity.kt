@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import smr.playground.base.BaseActivity
+import smr.playground.extensions.showDialog
 import smr.playground.welcome.WelcomeActivity
 
 class MainActivity : BaseActivity() {
@@ -15,6 +16,8 @@ class MainActivity : BaseActivity() {
         btnWelcome.setOnClickListener { startActivity(Intent(this, WelcomeActivity::class.java)) }
         btnDialog.setOnClickListener { showDialog("Hello Dialog!") }
         btnLaunchMode.setOnClickListener { TODO() }
+
+        TODO("Check Activity Lifecycle WRT Views: Layout, Measure, Draw events")
     }
 
 }

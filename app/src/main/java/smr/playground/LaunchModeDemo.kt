@@ -8,5 +8,6 @@ class LaunchModeDemo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launch_mode_demo)
+        // TODO implement launch mode demo
     }
 }

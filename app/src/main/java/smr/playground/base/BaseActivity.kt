@@ -1,14 +1,14 @@
 package smr.playground.base
 
-import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
-open class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity() {
 
-    val TAG = this.javaClass.simpleName
+    companion object {
+        val TAG = this::class.java.simpleName!!
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.v(TAG, "onCreate")
@@ -53,16 +53,5 @@ open class BaseActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         Log.v(TAG, "onRestoreInstanceState")
         super.onRestoreInstanceState(savedInstanceState)
-    }
-
-    fun showDialog(
-        msg: String,
-        title: String = "Alert",
-        txtPositiveBtn: String = "OK",
-        positiveListener: DialogInterface.OnClickListener? = null
-    ) {
-        AlertDialog.Builder(this).setTitle(title).setMessage(msg)
-            .setPositiveButton(txtPositiveBtn, positiveListener)
-            .create().show()
     }
 }
