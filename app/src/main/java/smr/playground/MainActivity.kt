@@ -16,6 +16,7 @@ class MainActivity : BaseActivity() {
         btnWelcome.setOnClickListener { startActivity(Intent(this, WelcomeActivity::class.java)) }
         btnDialog.setOnClickListener { showDialog("Hello Dialog!") }
         btnLaunchMode.setOnClickListener { TODO() }
+        btnMVVM.setOnClickListener { }
 
         TODO("Check Activity Lifecycle WRT Views: Layout, Measure, Draw events")
     }
