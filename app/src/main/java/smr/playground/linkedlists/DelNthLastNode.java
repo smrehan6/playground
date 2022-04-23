@@ -1,4 +1,4 @@
-package smr.playground;
+package smr.playground.linkedlists;
 
 /*
 Delete nth node from last in singly linked list

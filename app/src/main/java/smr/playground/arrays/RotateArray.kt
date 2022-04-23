@@ -1,4 +1,4 @@
-package smr.playground
+package smr.playground.arrays
 
 // TODO: unsolved
 class RotateArray {
