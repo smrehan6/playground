@@ -24,8 +24,9 @@ class RotateArray {
     }
 
     private fun rotate(nums: IntArray, k: Int) {
+        val x = k % nums.size
         val list = ArrayList<Int>()
-        for (i in nums.lastIndex downTo k) {
+        for (i in nums.lastIndex downTo x) {
             list.add(nums[i])
             nums[i] = nums[i - k]
         }
